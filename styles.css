@@ -1,0 +1,51 @@
+
+
+body { 
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color:#000008;
+    color: white;
+    font-family: 'Raleway', sans-serif
+}
+body {
+    display: flex;
+  }
+
+.all-container {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  #logo {
+    margin: 15px auto;
+    display: block; 
+  }
+
+.navbar {
+    width: 100%;
+    background-color: #000000;
+    overflow: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #FF0000;
+  }
+  
+  .active {
+    background-color: 	#282828;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
