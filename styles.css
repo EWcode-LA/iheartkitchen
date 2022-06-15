@@ -5,6 +5,9 @@
   }
 
 body { 
+    background-image: url(https://mcdn.wallpapersafari.com/medium/46/8/ncKYSs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     min-width: 100%;
     min-height: 100vh;
     margin: 0;
@@ -12,6 +15,13 @@ body {
     color: #f5f5f7;
     font-family: 'Raleway', sans-serif
 }
+
+h1 {
+    font-size: 72px;
+}
+
+
+  
 
 .all-container {
     max-width: 100%;
@@ -42,10 +52,15 @@ body {
   
   .navbar a:hover {
     background-color: #ea3e35;
+    transition: 0.3s;
+    cursor: pointer;
+  
+    
   }
   
   .active {
     background-color: 	#282828;
+
   }
 
   .copy-container {
@@ -55,9 +70,14 @@ body {
       text-align: center;
   }
 
-  .imgContainer{
-     content: url(/images/pexels-mark-mccammon-2724749.jpg);
-  }
+/* .background-image {
+    background: -webkit-linear-gradient(top, 
+    rgba(20, 19, 19, 0.146) 0%, 
+    rgba(0, 0, 0, 0.64) 20%,
+    rgba(137, 18, 18, 0.647) 80%,
+    rgba(78, 29, 29, 0.005) 100%
+  )
+} */
 
   .centered {
     position: absolute;
@@ -65,21 +85,122 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-style: normal;
-
+    font-size: 24px;
+    text-shadow: 2px 2px #000008;
+    max-width: 450px;
   }
   
   #main-kitchen {
-      margin: 10px auto;
+      margin: 40px;
       display: flex;
       opacity: .4;
+      border-radius: 10px;
+      border-width: 10px;
+      border-color: #ea3e35;
+      border-style: groove;
   }
 
+  div.gallery {
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: #ea3e35;
+    border-style: groove;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* input[type=submit]:hover {
+    background-color: #45a049;
+  } */
+  
+  .contact-container {
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: #ea3e35;
+    border-style: groove;
+    padding: 20px;
+  }
+
+  footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
+
   
 
   
-  /* @media screen and (max-width: 500px) {
+  @media screen and (max-width: 500px) {
     .navbar a {
       float: none;
       display: block;
     }
-  } */
+  }
+
+
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
