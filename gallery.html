@@ -16,20 +16,31 @@
   </head>
   <body>
     <div class="all-container">
-      <div class="navbar">
+      <nav>
         <div><img id="logo" src="/assets/output-onlinepngtools (1).png" /></div>
+        <button class="hamburger" id="hamburger">
+            <i class="fa fa-solid fa-bars"></i>
+
+            </fa-solid>
+        </button>
+        <div class="navbar-ul" id="navbar-ul">
         <a href="/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="/gallery.html"><i class="fa fa-camera-retro fa-lg"></i> Gallery</a>
-        <a href="Testimonials"><i class="fa fa-quote-left fa-lg"></i> Testimonials</a>
+        <a href="/gallery.html"
+          ><i class="fa fa-camera-retro fa-lg"></i> Gallery</a
+        >
+        <a href="information"
+          ><i class="fa fa-info-circle fa-lg"></i> Information</a
+        >
         <a href="/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-      </div>
+        </div>
+      </nav>
       <!-- h1 is here for a reference. Remove -->
-    </div>
+
 
     <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="img_5terre.jpg">
-            <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+          <a target="_blank" href="/assets/kitchen-image1.jpeg">
+            <img src="/assets/kitchen-image1.jpeg" alt="Kitchen-Remodel" width="600" height="400">
           </a>
           <div class="desc">Add a description of the image here</div>
         </div>
@@ -38,8 +49,8 @@
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="img_forest.jpg">
-            <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+          <a target="_blank" href="/assets/kitchen-image 2.jpeg">
+            <img src="/assets/kitchen-image 2.jpeg" alt="Kitchen-Remodel-two" width="600" height="400">
           </a>
           <div class="desc">Add a description of the image here</div>
         </div>
@@ -47,8 +58,8 @@
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="img_lights.jpg">
-            <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+          <a target="_blank" href="/assets/kitchen-image 3.jpeg">
+            <img src="/assets/kitchen-image 3.jpeg" alt="Kitchen-Remodel-three" width="600" height="400">
           </a>
           <div class="desc">Add a description of the image here</div>
         </div>
@@ -56,8 +67,8 @@
       
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="img_mountains.jpg">
-            <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+          <a target="_blank" href="/assets/kitchen-image 4.jpeg">
+            <img src="/assets/kitchen-image 4.jpeg" alt="Kitchen-Remodel-four" width="600" height="400">
           </a>
           <div class="desc">Add a description of the image here</div>
         </div>
@@ -69,7 +80,17 @@
         <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
         <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
       </div>
-
+      <footer>
+        <div class="footer-container">
+          <a>&copy; 2022 iheartkitchen |</a>
+          <a>Sitemap |</a>
+          <a>Privacy Policy |</a>
+          <a href="/contact.html">Contact |</a>
+          <a>Design by sethmiller.dev</a>
+        </div>
+      </footer>
+      </div>
+      <script src="script.js"></script>
   </body>
   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 </html>

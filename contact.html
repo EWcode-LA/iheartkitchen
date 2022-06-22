@@ -16,24 +16,35 @@
   </head>
   <body>
     <div class="all-container">
-      <div class="navbar">
+      <nav>
         <div><img id="logo" src="/assets/output-onlinepngtools (1).png" /></div>
+        <button class="hamburger" id="hamburger">
+            <i class="fa fa-solid fa-bars"></i>
+
+            </fa-solid>
+        </button>
+        <div class="navbar-ul" id="navbar-ul">
         <a href="/index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="/gallery.html"><i class="fa fa-camera-retro fa-lg"></i> Gallery</a>
-        <a href="Testimonials"><i class="fa fa-quote-left fa-lg"></i> Testimonials</a>
+        <a href="/gallery.html"
+          ><i class="fa fa-camera-retro fa-lg"></i> Gallery</a
+        >
+        <a href="information"
+          ><i class="fa fa-info-circle fa-lg"></i> Information</a
+        >
         <a href="/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-      </div>
+        </div>
+      </nav>
       <!-- h1 is here for a reference. Remove -->
-    </div>
+   
 
     <div class="contact-container">
         <!-- add clients code at the end -->
         <form action="https://submit-form.com/0AuWpDT3">
-            <label for="name">Name</label>
+          <div><label for="name">Name</label></div>
             <input type="text" id="name" name="name" placeholder="Name" required="" />
-            <label for="email">Email</label>
+            <div>  <label for="email">Email</label></div>
             <input type="email" id="email" name="email" placeholder="Email" required="" />
-            <label for="message">Message</label>
+            <div><label for="message">Message</label></div>
             <textarea
               id="message"
               name="message"
@@ -44,6 +55,17 @@
           </form>
           
       </div>
+      <footer>
+        <div class="footer-container">
+          <a>&copy; 2022 iheartkitchen |</a>
+          <a>Sitemap |</a>
+          <a>Privacy Policy |</a>
+          <a href="/contact.html">Contact |</a>
+          <a>Design by sethmiller.dev</a>
+        </div>
+      </footer>
+      </div>
+      <script src="script.js"></script>
   </body>
   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 </html>

@@ -8,7 +8,7 @@ body {
     background-image: url(https://mcdn.wallpapersafari.com/medium/46/8/ncKYSs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    min-width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     margin: 0;
     background-color:#000008;
@@ -33,29 +33,43 @@ h1 {
     display: block; 
   }
 
-  .navbar {
+  nav {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #000000;
     overflow: auto;
     align-items: center;
 }
   
-  .navbar a {
+  nav a {
     float: left;
     padding: 12px;
     color: #f5f5f7;
     text-decoration: none;
-    font-size: 17px;
-  }
+    font-size: 17px; 
+  } 
   
-  .navbar a:hover {
+  nav a:hover {
     background-color: #ea3e35;
     transition: 0.3s;
     cursor: pointer;
   
     
+  }
+
+  .hamburger {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    color: #f5f5f7;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .hamburger:focus {
+    outline: none;
   }
   
   .active {
@@ -70,14 +84,7 @@ h1 {
       text-align: center;
   }
 
-/* .background-image {
-    background: -webkit-linear-gradient(top, 
-    rgba(20, 19, 19, 0.146) 0%, 
-    rgba(0, 0, 0, 0.64) 20%,
-    rgba(137, 18, 18, 0.647) 80%,
-    rgba(78, 29, 29, 0.005) 100%
-  )
-} */
+
 
   .centered {
     position: absolute;
@@ -85,20 +92,22 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-style: normal;
-    font-size: 24px;
-    text-shadow: 2px 2px #000008;
+    font-size: 30px;
+    /* text-shadow: 2px 2px #000008; */
+    color: #f5f5f7;
+    text-shadow: #000008 1px 0 10px;
     max-width: 450px;
   }
   
   #main-kitchen {
       margin: 40px;
       display: flex;
-      opacity: .4;
       border-radius: 10px;
       border-width: 10px;
       border-color: #ea3e35;
       border-style: groove;
   }
+
 
   div.gallery {
     border-radius: 10px;
@@ -108,12 +117,12 @@ h1 {
   }
   
   div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid #ea3e35;;
   }
   
   div.gallery img {
     width: 100%;
-    height: auto;
+    height: 25%;
   }
   
   div.desc {
@@ -140,8 +149,8 @@ h1 {
 
   input[type=text], select, textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 50px;
+    border: 1px solid #ea3e35;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
@@ -149,13 +158,18 @@ h1 {
     resize: vertical;
   }
 
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+button {
+    background-color: #ea3e35;
+    color: #f5f5f7;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  #name, #email {
+    width: 25%;
+    padding: 12px;
   }
   
   /* input[type=submit]:hover {
@@ -167,35 +181,65 @@ h1 {
     border-width: 10px;
     border-color: #ea3e35;
     border-style: groove;
-    padding: 20px;
+    margin: 50px;
+    padding: 50px;
   }
 
-  footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: 100vw;
-    padding-top: 40px;
-    color: #fff;
+
+  .footer-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    background-color: #000000;
+    color: #f5f5f7;
+    overflow: auto;
+}
+
+.footer-container a {
+  color: #f5f5f7;
+  margin: 5px;
+  text-decoration:none;
 }
 
   
 
   
-  @media screen and (max-width: 500px) {
+  /* @media screen and (max-width: 500px) {
     .navbar a {
       float: none;
       display: block;
     }
-  }
+  } */
 
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 767px) {
+    .navbar-ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .navbar-ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .responsive {
       width: 49.99999%;
       margin: 6px 0;
+    }
+
+    div.gallery img {
+      height: auto;
     }
   }
   
@@ -204,3 +248,14 @@ h1 {
       width: 100%;
     }
   }
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    .responsive {
+      display: none;
+    }
+}
